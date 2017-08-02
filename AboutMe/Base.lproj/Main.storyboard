@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1Kf-eF-oUK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--About Me-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="About Me" id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Casey" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-wh-s5L">
+                                <rect key="frame" x="61" y="156" width="252" height="195"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Casey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-y0-XIH">
+                                <rect key="frame" x="161" y="359" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Pg-TjV">
+                                <rect key="frame" x="154" y="443" width="67" height="30"/>
+                                <color key="backgroundColor" red="0.69540319071633083" green="0.72336632013320923" blue="0.53885362212062238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="More Info">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I6h-bT-shg"/>
+                                    <segue destination="GZa-eX-gG1" kind="show" id="aIX-iw-Et7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XGK-wh-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AG6-If-spt"/>
+                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="centerX" secondItem="XGK-wh-s5L" secondAttribute="centerX" id="FaS-zC-NUL"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="Qxa-y0-XIH" secondAttribute="centerX" id="Kzn-EW-FDG"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="63" id="oEA-2V-yND"/>
+                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" id="trW-46-alt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cBf-G3-GPP"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Qxa-y0-XIH" id="nlt-GR-8SQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1236" y="135.38230884557723"/>
+        </scene>
+        <!--More Info-->
+        <scene sceneID="Bhk-ne-66X">
+            <objects>
+                <viewController title="More Info" id="GZa-eX-gG1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h69-sc-M7e"/>
+                        <viewControllerLayoutGuide type="bottom" id="ytu-VJ-dMp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Gq-oN-aho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I am a dog.  My name is Casey.  I love to make friends and play catch.  I am a good dog." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o1h-OT-8an">
+                                <rect key="frame" x="67" y="106" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5S-us-Bue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="b9p-nu-tRV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Kf-eF-oUK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iPh-Yz-Itt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Aj-Ng-ipC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVg-Qk-24d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="135.38230884557723"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Casey" width="640" height="480"/>
+    </resources>
 </document>
