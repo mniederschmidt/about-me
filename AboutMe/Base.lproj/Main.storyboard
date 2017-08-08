@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--About Me-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="About Me" id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="About Me" id="BYZ-38-t0r" customClass="AboutMeViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,49 +22,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Casey" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-wh-s5L">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Casey" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-wh-s5L" userLabel="Dog Image">
                                 <rect key="frame" x="61" y="156" width="252" height="195"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XGK-wh-s5L" secondAttribute="height" multiplier="84:65" id="0en-y2-aKd"/>
+                                    <constraint firstAttribute="height" constant="195" id="Xzs-YK-TAD"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Casey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-y0-XIH">
-                                <rect key="frame" x="161" y="359" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxa-y0-XIH">
+                                <rect key="frame" x="164" y="359" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Pg-TjV">
-                                <rect key="frame" x="154" y="443" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Pg-TjV">
+                                <rect key="frame" x="155" y="443" width="65" height="30"/>
                                 <color key="backgroundColor" red="0.69540319071633083" green="0.72336632013320923" blue="0.53885362212062238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="More Info">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I6h-bT-shg"/>
-                                    <segue destination="GZa-eX-gG1" kind="show" id="aIX-iw-Et7"/>
+                                    <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rrd-iA-4k2"/>
+                                    <segue destination="GZa-eX-gG1" kind="show" identifier="moreInfo" id="u6g-41-tKB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XGK-wh-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AG6-If-spt"/>
-                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="centerX" secondItem="XGK-wh-s5L" secondAttribute="centerX" id="FaS-zC-NUL"/>
-                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="Qxa-y0-XIH" secondAttribute="centerX" id="Kzn-EW-FDG"/>
-                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="63" id="oEA-2V-yND"/>
-                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" id="trW-46-alt"/>
+                            <constraint firstItem="XGK-wh-s5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="S5T-9z-tq8"/>
+                            <constraint firstItem="XGK-wh-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQa-iB-2dw"/>
+                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAc-pg-6Hx"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Znu-qT-71t"/>
+                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" id="uPC-mx-XVf"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="63" id="xF8-Ri-A9R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cBf-G3-GPP"/>
                     <connections>
-                        <outlet property="nameLabel" destination="Qxa-y0-XIH" id="nlt-GR-8SQ"/>
+                        <outlet property="nameLabel" destination="Qxa-y0-XIH" id="Tvf-mo-nch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1236" y="135.38230884557723"/>
         </scene>
+        <!--Friends-->
+        <scene sceneID="kJc-4h-EQj">
+            <objects>
+                <viewController title="Friends" id="7z8-nR-5z8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EYF-B2-4b3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qhz-ZP-oH9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RWx-IA-h6G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cV-Th-443" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2246" y="441"/>
+        </scene>
         <!--More Info-->
         <scene sceneID="Bhk-ne-66X">
             <objects>
-                <viewController title="More Info" id="GZa-eX-gG1" sceneMemberID="viewController">
+                <viewController title="More Info" id="GZa-eX-gG1" customClass="MoreInfoViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h69-sc-M7e"/>
                         <viewControllerLayoutGuide type="bottom" id="ytu-VJ-dMp"/>
@@ -85,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5S-us-Bue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2223" y="137"/>
+            <point key="canvasLocation" x="2239" y="-349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b9p-nu-tRV">
