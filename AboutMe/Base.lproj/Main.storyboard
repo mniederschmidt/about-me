@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,8 +36,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mQO-Lb-wRm">
+                                <rect key="frame" x="131" y="562" width="113" height="29"/>
+                                <segments>
+                                    <segment title="Dogs"/>
+                                    <segment title="People"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66n-ut-1NP">
+                                <rect key="frame" x="141" y="598" width="93" height="30"/>
+                                <color key="backgroundColor" red="0.69540319070000001" green="0.72336632010000002" blue="0.53885362209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Show Friends">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showFriends:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3za-ug-r4U"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Pg-TjV">
-                                <rect key="frame" x="155" y="443" width="65" height="30"/>
+                                <rect key="frame" x="155" y="414" width="65" height="30"/>
                                 <color key="backgroundColor" red="0.69540319071633083" green="0.72336632013320923" blue="0.53885362212062238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="More Info">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -52,14 +71,20 @@
                             <constraint firstItem="XGK-wh-s5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="S5T-9z-tq8"/>
                             <constraint firstItem="XGK-wh-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQa-iB-2dw"/>
                             <constraint firstItem="Qxa-y0-XIH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAc-pg-6Hx"/>
+                            <constraint firstItem="66n-ut-1NP" firstAttribute="centerX" secondItem="mQO-Lb-wRm" secondAttribute="centerX" id="ZcR-I3-uVg"/>
                             <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Znu-qT-71t"/>
+                            <constraint firstItem="66n-ut-1NP" firstAttribute="top" secondItem="mQO-Lb-wRm" secondAttribute="bottom" constant="8" id="gFo-Hb-5eD"/>
+                            <constraint firstItem="mQO-Lb-wRm" firstAttribute="top" secondItem="a5P-Pg-TjV" secondAttribute="bottom" constant="118" id="qAj-Tq-o5h"/>
                             <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" id="uPC-mx-XVf"/>
-                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="63" id="xF8-Ri-A9R"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="34" id="xF8-Ri-A9R"/>
+                            <constraint firstItem="mQO-Lb-wRm" firstAttribute="centerX" secondItem="a5P-Pg-TjV" secondAttribute="centerX" id="yZ9-Zs-w0f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cBf-G3-GPP"/>
                     <connections>
                         <outlet property="nameLabel" destination="Qxa-y0-XIH" id="Tvf-mo-nch"/>
+                        <outlet property="segmentedControl" destination="mQO-Lb-wRm" id="9WW-Cu-mjh"/>
+                        <segue destination="7z8-nR-5z8" kind="show" identifier="myFriends" id="UHm-yx-xIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,7 +94,7 @@
         <!--Friends-->
         <scene sceneID="kJc-4h-EQj">
             <objects>
-                <viewController title="Friends" id="7z8-nR-5z8" sceneMemberID="viewController">
+                <viewController title="Friends" id="7z8-nR-5z8" customClass="FriendsViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EYF-B2-4b3"/>
                         <viewControllerLayoutGuide type="bottom" id="Qhz-ZP-oH9"/>
@@ -77,12 +102,41 @@
                     <view key="view" contentMode="scaleToFill" id="RWx-IA-h6G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ltj-98-WH7">
+                                <rect key="frame" x="67" y="423" width="240" height="123"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeW-GM-a3y">
+                                <rect key="frame" x="67" y="153" width="240" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="fDp-n7-FOM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qhz-ZP-oH9" firstAttribute="top" secondItem="Ltj-98-WH7" secondAttribute="bottom" constant="121" id="9M1-2S-dk5"/>
+                            <constraint firstItem="XeW-GM-a3y" firstAttribute="leading" secondItem="Ltj-98-WH7" secondAttribute="leading" id="G44-GG-r5W"/>
+                            <constraint firstItem="XeW-GM-a3y" firstAttribute="centerX" secondItem="RWx-IA-h6G" secondAttribute="centerX" id="Hfm-ua-u37"/>
+                            <constraint firstItem="Ltj-98-WH7" firstAttribute="centerX" secondItem="XeW-GM-a3y" secondAttribute="centerX" id="Kaq-kz-dcD"/>
+                            <constraint firstItem="Ltj-98-WH7" firstAttribute="top" secondItem="XeW-GM-a3y" secondAttribute="bottom" constant="37" id="oNt-fF-fn5"/>
+                            <constraint firstItem="XeW-GM-a3y" firstAttribute="top" secondItem="EYF-B2-4b3" secondAttribute="bottom" constant="89" id="w6p-Dd-yBD"/>
+                            <constraint firstItem="XeW-GM-a3y" firstAttribute="trailing" secondItem="Ltj-98-WH7" secondAttribute="trailing" id="wOl-CJ-8MD"/>
+                            <constraint firstItem="XeW-GM-a3y" firstAttribute="leading" secondItem="RWx-IA-h6G" secondAttribute="leadingMargin" constant="51" id="zfz-hN-aVa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="friendImage" destination="XeW-GM-a3y" id="2K2-xZ-ckR"/>
+                        <outlet property="friendText" destination="Ltj-98-WH7" id="HPA-Qy-oWM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cV-Th-443" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2246" y="441"/>
+            <point key="canvasLocation" x="2245.5999999999999" y="440.32983508245883"/>
         </scene>
         <!--More Info-->
         <scene sceneID="Bhk-ne-66X">

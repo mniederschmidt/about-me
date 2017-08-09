@@ -9,27 +9,20 @@
 import UIKit
 
 class FriendsViewController: UIViewController {
-
+    
+    var friend: Friends?
+    
+    @IBOutlet weak var friendImage: UIImageView!
+    @IBOutlet weak var friendText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let friend = friend else {
+            return
+        }
+
+        friendImage.image = friend.getImage()
+        friendText.text = friend.getFriendsDescription()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
