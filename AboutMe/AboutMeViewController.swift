@@ -15,7 +15,7 @@ enum Friends: Int {
     func getFriendsDescription() -> String {
         switch self {
         case .dogs:
-            return "This is my best friend, Yadi"
+            return "This is my best friend, Yadi."
         case .people:
             return "This is my buddy.  He is a great kid.  I love to play baseball with him."
         }

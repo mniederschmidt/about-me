@@ -62,7 +62,7 @@
                                 </state>
                                 <connections>
                                     <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rrd-iA-4k2"/>
-                                    <segue destination="GZa-eX-gG1" kind="show" identifier="moreInfo" id="u6g-41-tKB"/>
+                                    <segue destination="PEU-jE-5iG" kind="show" id="C9G-2O-liw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +90,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1236" y="135.38230884557723"/>
+        </scene>
+        <!--More Info Table View Controller-->
+        <scene sceneID="U1y-zO-JAH">
+            <objects>
+                <tableViewController id="PEU-jE-5iG" customClass="MoreInfoTableViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BSE-Ej-0jt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hobbies" id="4LI-U5-5Ja" userLabel="Hobbies">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="dvp-Xs-Zdh" userLabel="Hobby Cell 1">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dvp-Xs-Zdh" id="ALA-OT-RJm">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="PTO-QT-N0W" userLabel="Hobby Cell 2">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PTO-QT-N0W" id="4ll-ng-D08">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Favorite Food" id="K16-hA-ldN" userLabel="Food">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" id="ezz-cU-Me4" userLabel="Favorite Food 1">
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ezz-cU-Me4" id="8St-Im-Cej">
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WK-OK-Fa3">
+                                                    <rect key="frame" x="17" y="12" width="69" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DRR-E0-viX" userLabel="Favorite Food 2">
+                                        <rect key="frame" x="0.0" y="188" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DRR-E0-viX" id="KOO-CI-FKf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uds-1h-Qes">
+                                                    <rect key="frame" x="17" y="12" width="69" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="PEU-jE-5iG" id="Zwg-u0-CJf"/>
+                            <outlet property="delegate" destination="PEU-jE-5iG" id="oIi-Yq-3cJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="favFood1" destination="ezz-cU-Me4" id="Lkf-Jp-eL1"/>
+                        <outlet property="favFood2" destination="DRR-E0-viX" id="ehK-6C-2WD"/>
+                        <outlet property="hobbyCell1" destination="dvp-Xs-Zdh" id="O4I-AO-dzM"/>
+                        <outlet property="hobbyCell2" destination="PTO-QT-N0W" id="qsa-NM-XqW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cH8-x4-bb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.5999999999999" y="-287.40629685157421"/>
         </scene>
         <!--Friends-->
         <scene sceneID="kJc-4h-EQj">
@@ -137,33 +221,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cV-Th-443" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2245.5999999999999" y="440.32983508245883"/>
-        </scene>
-        <!--More Info-->
-        <scene sceneID="Bhk-ne-66X">
-            <objects>
-                <viewController title="More Info" id="GZa-eX-gG1" customClass="MoreInfoViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h69-sc-M7e"/>
-                        <viewControllerLayoutGuide type="bottom" id="ytu-VJ-dMp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4Gq-oN-aho">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I am a dog.  My name is Casey.  I love to make friends and play catch.  I am a good dog." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o1h-OT-8an">
-                                <rect key="frame" x="67" y="106" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n5S-us-Bue" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2239" y="-349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b9p-nu-tRV">
