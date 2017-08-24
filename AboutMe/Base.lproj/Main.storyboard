@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cV-Th-443" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2245.5999999999999" y="440.32983508245883"/>
+            <point key="canvasLocation" x="2238" y="529"/>
         </scene>
         <!--More Info-->
         <scene sceneID="Bhk-ne-66X">
@@ -150,20 +150,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I am a dog.  My name is Casey.  I love to make friends and play catch.  I am a good dog." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o1h-OT-8an">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I am a dog.  My name is Casey.  I love to make friends and play catch.  I am a good dog." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o1h-OT-8an">
                                 <rect key="frame" x="67" y="106" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="qO9-Pg-Ddu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-yL-9qk">
+                                <rect key="frame" x="134" y="497" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.69540319070000001" green="0.72336632010000002" blue="0.53885362209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Favorite Movies">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LfD-i4-hA8" kind="show" id="OHC-Cp-XlN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o1h-OT-8an" firstAttribute="centerX" secondItem="4Gq-oN-aho" secondAttribute="centerX" id="3fR-RE-V7I"/>
+                            <constraint firstItem="o1h-OT-8an" firstAttribute="leading" secondItem="4Gq-oN-aho" secondAttribute="leadingMargin" constant="51" id="cFU-AP-Ck3"/>
+                            <constraint firstItem="o1h-OT-8an" firstAttribute="top" secondItem="h69-sc-M7e" secondAttribute="bottom" constant="42" id="j4e-cV-Vlc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5S-us-Bue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2239" y="-349"/>
+            <point key="canvasLocation" x="2238" y="-327"/>
+        </scene>
+        <!--Favorite Movies-->
+        <scene sceneID="21r-T5-w9O">
+            <objects>
+                <viewController restorationIdentifier="Favorite Movies" storyboardIdentifier="Favorite Movies" title="Favorite Movies" id="LfD-i4-hA8" customClass="FavoriteMoviesViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BCC-eh-3eb"/>
+                        <viewControllerLayoutGuide type="bottom" id="dyR-xb-zeK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hxj-Ma-MUL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-5C-AJy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eB5-WB-3Fm">
+                                    <size key="itemSize" width="177" height="222"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Movie Cell" id="kYl-aQ-v8f" customClass="MovieCollectionViewCell" customModule="AboutMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="222"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="177" height="222"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyG-30-YbR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="177" height="222"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="fyG-30-YbR" firstAttribute="leading" secondItem="kYl-aQ-v8f" secondAttribute="leading" id="Hgp-fX-SaH"/>
+                                            <constraint firstItem="fyG-30-YbR" firstAttribute="top" secondItem="kYl-aQ-v8f" secondAttribute="top" id="diN-Gs-b4X"/>
+                                            <constraint firstAttribute="trailing" secondItem="fyG-30-YbR" secondAttribute="trailing" id="ll9-sB-6Ip"/>
+                                            <constraint firstAttribute="bottom" secondItem="fyG-30-YbR" secondAttribute="bottom" id="nP0-uc-wSA"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="movieImageView" destination="fyG-30-YbR" id="eas-KW-Ff3"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="LfD-i4-hA8" id="lee-g2-z4W"/>
+                                    <outlet property="delegate" destination="LfD-i4-hA8" id="p9m-BE-Nrd"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rAC-5C-AJy" secondAttribute="trailing" id="QNP-YN-hfi"/>
+                            <constraint firstItem="rAC-5C-AJy" firstAttribute="top" secondItem="Hxj-Ma-MUL" secondAttribute="top" id="Xwl-qy-jeW"/>
+                            <constraint firstItem="dyR-xb-zeK" firstAttribute="top" secondItem="rAC-5C-AJy" secondAttribute="bottom" id="crw-Q0-fbx"/>
+                            <constraint firstItem="rAC-5C-AJy" firstAttribute="leading" secondItem="Hxj-Ma-MUL" secondAttribute="leading" id="zBy-ik-g7z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdw-CH-fTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3228" y="-327.88605697151428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b9p-nu-tRV">
