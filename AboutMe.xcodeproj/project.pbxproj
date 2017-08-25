@@ -25,6 +25,7 @@
 		93E42A631F4F2A1A007908B6 /* FavoriteMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E42A621F4F2A1A007908B6 /* FavoriteMoviesViewController.swift */; };
 		93E42A651F4F3088007908B6 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E42A641F4F3088007908B6 /* MovieCollectionViewCell.swift */; };
 		93E42A671F4F45E2007908B6 /* Movie4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93E42A661F4F45E2007908B6 /* Movie4.jpg */; };
+		93E42A691F4F9320007908B6 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E42A681F4F9320007908B6 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		93E42A621F4F2A1A007908B6 /* FavoriteMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMoviesViewController.swift; sourceTree = "<group>"; };
 		93E42A641F4F3088007908B6 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		93E42A661F4F45E2007908B6 /* Movie4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Movie4.jpg; sourceTree = "<group>"; };
+		93E42A681F4F9320007908B6 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				9324F7F31F4E1354008E9B3B /* Movie Pics */,
 				93A16F9B1F34264800CF7623 /* Supporting Files */,
 				93A16F661F32571D00CF7623 /* Main.storyboard */,
+				93E42A681F4F9320007908B6 /* MovieDetailViewController.swift */,
 				93A16F641F32571D00CF7623 /* ViewController.swift */,
 				93A16F9C1F3428F500CF7623 /* AboutMeViewController.swift */,
 				93A16FA01F34292700CF7623 /* MoreInfoViewController.swift */,
@@ -203,6 +206,7 @@
 				93A16F651F32571D00CF7623 /* ViewController.swift in Sources */,
 				93A16FA11F34292700CF7623 /* MoreInfoViewController.swift in Sources */,
 				93E42A631F4F2A1A007908B6 /* FavoriteMoviesViewController.swift in Sources */,
+				93E42A691F4F9320007908B6 /* MovieDetailViewController.swift in Sources */,
 				93E42A651F4F3088007908B6 /* MovieCollectionViewCell.swift in Sources */,
 				93A16F9D1F3428F500CF7623 /* AboutMeViewController.swift in Sources */,
 				93A16F631F32571D00CF7623 /* AppDelegate.swift in Sources */,

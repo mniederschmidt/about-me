@@ -16,6 +16,8 @@ struct MovieObject {
 
 class FavoriteMoviesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var movieCollectionView: UICollectionView!
+    
 //    let moviePicArray = ["Movie1.jpg", "Movie2.jpg", "Movie3.jpg", "Movie4.jpg", "Movie5.jpg", "Movie6.jpg", "Movie7.jpg", "Movie8.jpg"]
     
     let movie1 = MovieObject(name: "A Dog's Purpose", image: "Movie1.jpg", description: "A dog looks to discover his purpose in life over the course of several lifetimes and owners.")
@@ -44,6 +46,14 @@ class FavoriteMoviesViewController: UIViewController, UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Movie Cell", for: indexPath) as! MovieCollectionViewCell
         cell.movieImageView.image = UIImage.init(named: movieArray[indexPath.row].image)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Movie Detail Segue",
+            let destination = segue.destination as? MovieDetailViewController,
+            let index = movieCollectionView.indexPath(for: sender as! MovieCollectionViewCell) {
+            destination.movieObject = movieArray[index.row]
+        }
     }
 
     /*

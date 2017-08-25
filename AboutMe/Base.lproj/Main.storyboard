@@ -225,6 +225,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="movieImageView" destination="fyG-30-YbR" id="eas-KW-Ff3"/>
+                                            <segue destination="qE0-VE-fLX" kind="show" identifier="Movie Detail Segue" id="be2-w9-Ktv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -242,10 +243,57 @@
                             <constraint firstItem="rAC-5C-AJy" firstAttribute="leading" secondItem="Hxj-Ma-MUL" secondAttribute="leading" id="zBy-ik-g7z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieCollectionView" destination="rAC-5C-AJy" id="rQ3-Z2-F1K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdw-CH-fTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3228" y="-327.88605697151428"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="rfs-o9-HQy">
+            <objects>
+                <viewController id="qE0-VE-fLX" customClass="MovieDetailViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y7r-2I-mLi"/>
+                        <viewControllerLayoutGuide type="bottom" id="z3g-qh-e7B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vda-t9-Ems">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h6b-cd-h7B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="407"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3w-qB-nTQ">
+                                <rect key="frame" x="16" y="492" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gEi-OK-FuE">
+                                <rect key="frame" x="16" y="521" width="343" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieDescriptionTextView" destination="gEi-OK-FuE" id="ANC-TW-esc"/>
+                        <outlet property="movieImageView" destination="h6b-cd-h7B" id="osz-XS-Kkh"/>
+                        <outlet property="movieNameLabel" destination="H3w-qB-nTQ" id="TlQ-75-yY0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhf-rO-Ji0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4213.6000000000004" y="-328.78560719640183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b9p-nu-tRV">
