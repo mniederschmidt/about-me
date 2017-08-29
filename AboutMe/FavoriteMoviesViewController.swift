@@ -35,7 +35,16 @@ class FavoriteMoviesViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         movieArray = [movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8]
 
-        // Do any additional setup after loading the view.
+        // Set collection view layout
+        let itemSize = UIScreen.main.bounds.width/2 - 5
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        layout.sectionInset = UIEdgeInsetsMake(5, 0, 5, 0)
+        layout.minimumInteritemSpacing = 2
+        layout.minimumLineSpacing = 2
+        
+        movieCollectionView.collectionViewLayout = layout
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
