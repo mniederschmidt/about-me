@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -68,14 +69,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" symbolic="YES" id="Hgp-VS-97y"/>
                             <constraint firstItem="XGK-wh-s5L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="S5T-9z-tq8"/>
                             <constraint firstItem="XGK-wh-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQa-iB-2dw"/>
                             <constraint firstItem="Qxa-y0-XIH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAc-pg-6Hx"/>
+                            <constraint firstItem="66n-ut-1NP" firstAttribute="top" secondItem="mQO-Lb-wRm" secondAttribute="bottom" constant="8" symbolic="YES" id="ZSl-UW-Lyk"/>
                             <constraint firstItem="66n-ut-1NP" firstAttribute="centerX" secondItem="mQO-Lb-wRm" secondAttribute="centerX" id="ZcR-I3-uVg"/>
                             <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Znu-qT-71t"/>
-                            <constraint firstItem="66n-ut-1NP" firstAttribute="top" secondItem="mQO-Lb-wRm" secondAttribute="bottom" constant="8" id="gFo-Hb-5eD"/>
                             <constraint firstItem="mQO-Lb-wRm" firstAttribute="top" secondItem="a5P-Pg-TjV" secondAttribute="bottom" constant="118" id="qAj-Tq-o5h"/>
-                            <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" id="uPC-mx-XVf"/>
                             <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="34" id="xF8-Ri-A9R"/>
                             <constraint firstItem="mQO-Lb-wRm" firstAttribute="centerX" secondItem="a5P-Pg-TjV" secondAttribute="centerX" id="yZ9-Zs-w0f"/>
                         </constraints>
@@ -159,9 +160,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-yL-9qk">
-                                <rect key="frame" x="134" y="497" width="126" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-yL-9qk">
+                                <rect key="frame" x="134" y="485.5" width="107" height="30"/>
                                 <color key="backgroundColor" red="0.69540319070000001" green="0.72336632010000002" blue="0.53885362209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Favorite Movies">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,8 +174,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o1h-OT-8an" firstAttribute="centerX" secondItem="4Gq-oN-aho" secondAttribute="centerX" id="3fR-RE-V7I"/>
+                            <constraint firstItem="Exi-yL-9qk" firstAttribute="centerX" secondItem="4Gq-oN-aho" secondAttribute="centerX" id="Asx-rW-u1c"/>
                             <constraint firstItem="o1h-OT-8an" firstAttribute="leading" secondItem="4Gq-oN-aho" secondAttribute="leadingMargin" constant="51" id="cFU-AP-Ck3"/>
                             <constraint firstItem="o1h-OT-8an" firstAttribute="top" secondItem="h69-sc-M7e" secondAttribute="bottom" constant="42" id="j4e-cV-Vlc"/>
+                            <constraint firstItem="Exi-yL-9qk" firstAttribute="centerY" secondItem="4Gq-oN-aho" secondAttribute="centerY" multiplier="1.5" id="rN4-zZ-BkK"/>
                         </constraints>
                     </view>
                 </viewController>
