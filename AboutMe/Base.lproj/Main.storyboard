@@ -38,26 +38,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mQO-Lb-wRm">
-                                <rect key="frame" x="131" y="549.5" width="113" height="29"/>
+                                <rect key="frame" x="131" y="550" width="113" height="29"/>
                                 <segments>
                                     <segment title="Dogs"/>
                                     <segment title="People"/>
                                 </segments>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Pg-TjV">
-                                <rect key="frame" x="155" y="368.5" width="65" height="30"/>
-                                <color key="backgroundColor" red="0.69540319071633083" green="0.72336632013320923" blue="0.53885362212062238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="More Info">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rrd-iA-4k2"/>
-                                    <segue destination="GZa-eX-gG1" kind="show" identifier="moreInfo" id="u6g-41-tKB"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66n-ut-1NP">
-                                <rect key="frame" x="141" y="585.5" width="93" height="30"/>
+                                <rect key="frame" x="141" y="586" width="93" height="30"/>
                                 <color key="backgroundColor" red="0.69540319070000001" green="0.72336632010000002" blue="0.53885362209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Show Friends">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -66,20 +55,40 @@
                                     <action selector="showFriends:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3za-ug-r4U"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5P-Pg-TjV">
+                                <rect key="frame" x="148" y="365" width="79" height="30"/>
+                                <color key="backgroundColor" red="0.69540319071633083" green="0.72336632013320923" blue="0.53885362212062238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="3kW-Mm-lVj"/>
+                                </constraints>
+                                <state key="normal" title="More Info">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="moreInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rrd-iA-4k2"/>
+                                    <segue destination="GZa-eX-gG1" kind="show" identifier="moreInfo" id="u6g-41-tKB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="mQO-Lb-wRm" secondAttribute="centerX" id="9tN-At-BZM"/>
+                            <constraint firstItem="XGK-wh-s5L" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="252:667" id="DFX-YJ-gIP"/>
                             <constraint firstItem="Qxa-y0-XIH" firstAttribute="top" secondItem="XGK-wh-s5L" secondAttribute="bottom" constant="8" symbolic="YES" id="Hgp-VS-97y"/>
                             <constraint firstItem="66n-ut-1NP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.8" id="OdI-gd-lc1"/>
                             <constraint firstItem="XGK-wh-s5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SQa-iB-2dw"/>
                             <constraint firstItem="Qxa-y0-XIH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAc-pg-6Hx"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="Qxa-y0-XIH" secondAttribute="centerX" id="Z4z-gg-76L"/>
                             <constraint firstItem="66n-ut-1NP" firstAttribute="top" secondItem="mQO-Lb-wRm" secondAttribute="bottom" constant="8" symbolic="YES" id="ZSl-UW-Lyk"/>
                             <constraint firstItem="66n-ut-1NP" firstAttribute="centerX" secondItem="mQO-Lb-wRm" secondAttribute="centerX" id="ZcR-I3-uVg"/>
-                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Znu-qT-71t"/>
-                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" id="flc-SZ-OqY"/>
                             <constraint firstItem="XGK-wh-s5L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="2:3" id="o4n-gT-96B"/>
-                            <constraint firstItem="mQO-Lb-wRm" firstAttribute="centerX" secondItem="a5P-Pg-TjV" secondAttribute="centerX" id="yZ9-Zs-w0f"/>
+                            <constraint firstItem="a5P-Pg-TjV" firstAttribute="top" secondItem="Qxa-y0-XIH" secondAttribute="bottom" constant="16" id="qVc-KB-nUZ"/>
                         </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="a5P-Pg-TjV"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="cBf-G3-GPP"/>
                     <connections>
