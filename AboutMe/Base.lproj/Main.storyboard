@@ -104,31 +104,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ltj-98-WH7">
-                                <rect key="frame" x="67" y="423" width="240" height="123"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XeW-GM-a3y">
-                                <rect key="frame" x="67" y="153" width="240" height="233"/>
+                                <rect key="frame" x="67" y="162" width="240" height="233"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="233" id="fDp-n7-FOM"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ltj-98-WH7">
+                                <rect key="frame" x="67" y="422" width="240" height="124"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="4ST-Lw-orY"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qhz-ZP-oH9" firstAttribute="top" secondItem="Ltj-98-WH7" secondAttribute="bottom" constant="121" id="9M1-2S-dk5"/>
+                            <constraint firstItem="Ltj-98-WH7" firstAttribute="top" secondItem="XeW-GM-a3y" secondAttribute="bottom" multiplier="1.05" constant="8" symbolic="YES" id="5WC-wk-pj6"/>
                             <constraint firstItem="XeW-GM-a3y" firstAttribute="leading" secondItem="Ltj-98-WH7" secondAttribute="leading" id="G44-GG-r5W"/>
                             <constraint firstItem="XeW-GM-a3y" firstAttribute="centerX" secondItem="RWx-IA-h6G" secondAttribute="centerX" id="Hfm-ua-u37"/>
                             <constraint firstItem="Ltj-98-WH7" firstAttribute="centerX" secondItem="XeW-GM-a3y" secondAttribute="centerX" id="Kaq-kz-dcD"/>
-                            <constraint firstItem="Ltj-98-WH7" firstAttribute="top" secondItem="XeW-GM-a3y" secondAttribute="bottom" constant="37" id="oNt-fF-fn5"/>
-                            <constraint firstItem="XeW-GM-a3y" firstAttribute="top" secondItem="EYF-B2-4b3" secondAttribute="bottom" constant="89" id="w6p-Dd-yBD"/>
-                            <constraint firstItem="XeW-GM-a3y" firstAttribute="trailing" secondItem="Ltj-98-WH7" secondAttribute="trailing" id="wOl-CJ-8MD"/>
+                            <constraint firstItem="XeW-GM-a3y" firstAttribute="centerY" secondItem="RWx-IA-h6G" secondAttribute="centerY" multiplier="5:6" id="nZU-dO-qOt"/>
                             <constraint firstItem="XeW-GM-a3y" firstAttribute="leading" secondItem="RWx-IA-h6G" secondAttribute="leadingMargin" constant="51" id="zfz-hN-aVa"/>
                         </constraints>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ltj-98-WH7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="friendImage" destination="XeW-GM-a3y" id="2K2-xZ-ckR"/>
